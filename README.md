@@ -1,5 +1,7 @@
 # Privacy Visualizer Redesign
 
+Demo: [here](https://test.racode.cz/)
+
 Made with: React + Vite
 
 Used: Boostrap, Boostrap Icons, SCSS
