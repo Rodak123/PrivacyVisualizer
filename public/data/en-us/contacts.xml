@@ -1,0 +1,22 @@
+<category>
+  <name>Contacts</name>
+  <definition>
+    A list of contacts in your phone, address book, or social graph. This
+    would be directly identifiable information for your contacts.
+  </definition>
+  <benefits>
+    Finding friends who use the same service.
+  </benefits>
+  <consequences>
+    You are giving out direct identifying information about your friends and
+    family without their consent. This option has the same consequences as
+    contact info for yourself, but it's for all your contacts instead. This
+    allows scammers to send your friends and family spam calls, texts, and
+    emails.
+  </consequences>
+  <searchTerms>
+    <term>address book</term>
+    <term>contacts</term>
+    <term>friends list</term>
+  </searchTerms>
+</category>

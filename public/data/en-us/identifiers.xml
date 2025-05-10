@@ -1,0 +1,30 @@
+<category>
+  <name>Purchases</name>
+  <definition>
+    Health and medical data, which includes data from any user provided
+    health or medical data. This also contains fitness and exercise data,
+    including the Motion and Fitness API. This includes things like your
+    device’s accelerometers, gyroscopes, pedometer, magnetometer, and
+    barometer. This can be collected for user interactions, fitness
+    tracking, health-related matters, and more. For example, a game might
+    use accelerometer and gyroscope input to control on screen game
+    behavior, which technically falls under this health category as motion
+    data.
+  </definition>
+  <benefits>
+    Having a music playlist go along with a workout. Having a third-party
+    health tracking app track steps (like Garmin, Pokemon Go). This data
+    normally requires permission to be collected, but please ensure it is
+    optional within the privacy policy.
+  </benefits>
+  <consequences>
+    While not normally sold, data that is collected could be used against
+    you in insurance-related schemes, as we have seen before.
+  </consequences>
+  <searchTerms>
+    <term>accelerometers</term>
+    <term>accelerometers</term>
+    <term>accelerometers</term>
+    <term>accelerometers</term>
+  </searchTerms>
+</category>

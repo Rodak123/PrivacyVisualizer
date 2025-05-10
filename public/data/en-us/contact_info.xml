@@ -1,0 +1,25 @@
+<category>
+  <name>Contact Info</name>
+  <definition>
+    Having a music playlist go along with a workout. Having a third-party
+    health tracking app track steps (like Garmin, Pokemon Go). This data
+    normally requires permission to be collected, but please ensure it is
+    optional within the privacy policy.
+  </definition>
+  <benefits>
+    Getting items shipped to you that you ordered using online shopping, a
+    delivery driver contacting you in regards to a food delivery, a
+    newsletter sent via email.
+  </benefits>
+  <consequences>
+    This is the number one source that scammers use to send you spam calls,
+    texts, and emails.
+  </consequences>
+  <searchTerms>
+    <term>name</term>
+    <term>address</term>
+    <term>email</term>
+    <term>phone number</term>
+    <term>text</term>
+  </searchTerms>
+</category>

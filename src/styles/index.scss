@@ -1,0 +1,15 @@
+@import "./boostrap.scss";
+
+@import "./utils/sizing.scss";
+
+@import "./components/Category.scss";
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#header, #footer {
+  height: 2rem;
+}

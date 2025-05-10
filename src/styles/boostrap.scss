@@ -1,0 +1,119 @@
+@import "./theme.scss"; // Import your themes first
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Override Bootstrap's variables with your theme colors BEFORE importing variables
+$primary: map-get($light-theme, "primary") !default;
+$secondary: map-get($light-theme, "secondary") !default;
+$info: map-get($light-theme, "accent") !default;
+$body-bg: map-get($light-theme, "background") !default;
+$body-color: map-get($light-theme, "text") !default;
+
+// Dark mode variables
+$primary-dark: map-get($dark-theme, "primary");
+$secondary-dark: map-get($dark-theme, "secondary");
+$info-dark: map-get($dark-theme, "accent");
+$body-bg-dark: map-get($dark-theme, "background");
+$body-color-dark: map-get($dark-theme, "text");
+
+// Import Bootstrap core
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Components we want
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+// Complete theme override for all variables
+:root,
+[data-bs-theme="light"] {
+  // Base colors
+  --bs-body-bg: #{map-get($light-theme, "background")};
+  --bs-body-color: #{map-get($light-theme, "text")};
+  
+  // Theme colors
+  --bs-primary: #{map-get($light-theme, "primary")};
+  --bs-secondary: #{map-get($light-theme, "secondary")};
+  --bs-info: #{map-get($light-theme, "accent")};
+  
+  // RGB variants
+  --bs-primary-rgb: #{to-rgb(map-get($light-theme, "primary"))};
+  --bs-secondary-rgb: #{to-rgb(map-get($light-theme, "secondary"))};
+  --bs-info-rgb: #{to-rgb(map-get($light-theme, "accent"))};
+  --bs-body-bg-rgb: #{to-rgb(map-get($light-theme, "background"))};
+  --bs-body-color-rgb: #{to-rgb(map-get($light-theme, "text"))};
+  
+  // Derived colors
+  --bs-primary-text-emphasis: #{shade-color(map-get($light-theme, "primary"), 60%)};
+  --bs-secondary-text-emphasis: #{shade-color(map-get($light-theme, "secondary"), 60%)};
+  --bs-info-text-emphasis: #{shade-color(map-get($light-theme, "accent"), 60%)};
+  
+  --bs-primary-bg-subtle: #{tint-color(map-get($light-theme, "primary"), 80%)};
+  --bs-secondary-bg-subtle: #{tint-color(map-get($light-theme, "secondary"), 80%)};
+  --bs-info-bg-subtle: #{tint-color(map-get($light-theme, "accent"), 80%)};
+  
+  --bs-primary-border-subtle: #{tint-color(map-get($light-theme, "primary"), 60%)};
+  --bs-secondary-border-subtle: #{tint-color(map-get($light-theme, "secondary"), 60%)};
+  --bs-info-border-subtle: #{tint-color(map-get($light-theme, "accent"), 60%)};
+  
+  // Link colors
+  --bs-link-color: #{map-get($light-theme, "primary")};
+  --bs-link-color-rgb: #{to-rgb(map-get($light-theme, "primary"))};
+  --bs-link-hover-color: #{shade-color(map-get($light-theme, "primary"), 20%)};
+  --bs-link-hover-color-rgb: #{to-rgb(shade-color(map-get($light-theme, "primary"), 20%))};
+}
+
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+  
+  // Base colors
+  --bs-body-bg: #{map-get($dark-theme, "background")};
+  --bs-body-color: #{map-get($dark-theme, "text")};
+  
+  // Theme colors  
+  --bs-primary: #{map-get($dark-theme, "primary")};
+  --bs-secondary: #{map-get($dark-theme, "secondary")};
+  --bs-info: #{map-get($dark-theme, "accent")};
+  
+  // RGB variants
+  --bs-primary-rgb: #{to-rgb(map-get($dark-theme, "primary"))};
+  --bs-secondary-rgb: #{to-rgb(map-get($dark-theme, "secondary"))};
+  --bs-info-rgb: #{to-rgb(map-get($dark-theme, "accent"))};
+  --bs-body-bg-rgb: #{to-rgb(map-get($dark-theme, "background"))};
+  --bs-body-color-rgb: #{to-rgb(map-get($dark-theme, "text"))};
+  
+  // Derived colors
+  --bs-primary-text-emphasis: #{tint-color(map-get($dark-theme, "primary"), 40%)};
+  --bs-secondary-text-emphasis: #{tint-color(map-get($dark-theme, "secondary"), 40%)};
+  --bs-info-text-emphasis: #{tint-color(map-get($dark-theme, "accent"), 40%)};
+  
+  --bs-primary-bg-subtle: #{shade-color(map-get($dark-theme, "primary"), 80%)};
+  --bs-secondary-bg-subtle: #{shade-color(map-get($dark-theme, "secondary"), 80%)};
+  --bs-info-bg-subtle: #{shade-color(map-get($dark-theme, "accent"), 80%)};
+  
+  --bs-primary-border-subtle: #{shade-color(map-get($dark-theme, "primary"), 40%)};
+  --bs-secondary-border-subtle: #{shade-color(map-get($dark-theme, "secondary"), 40%)};
+  --bs-info-border-subtle: #{shade-color(map-get($dark-theme, "accent"), 40%)};
+  
+  // Link colors
+  --bs-link-color: #{tint-color(map-get($dark-theme, "primary"), 40%)};
+  --bs-link-color-rgb: #{to-rgb(tint-color(map-get($dark-theme, "primary"), 40%))};
+  --bs-link-hover-color: #{tint-color(map-get($dark-theme, "primary"), 60%)};
+  --bs-link-hover-color-rgb: #{to-rgb(tint-color(map-get($dark-theme, "primary"), 60%))};
+  
+  // Emphasis
+  --bs-emphasis-color: #{map-get($dark-theme, "text")};
+  --bs-emphasis-color-rgb: #{to-rgb(map-get($dark-theme, "text"))};
+}
+
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";

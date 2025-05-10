@@ -1,0 +1,37 @@
+<category>
+  <name>Financial</name>
+  <definition>
+    Payment information, such as form of payment, payment card number, or
+    bank account number. If an app uses a payment service (like Stripe,
+    Shopify, or Paypal), and is not collected, it does not need to be
+    disclosed in a privacy policy. You should read the privacy policy of
+    whatever payment service a given app or website is using to understand
+    how they collect and protect your data as well. This category can also
+    contain your credit score, salary, income, assets, debts, or any other
+    financial information.
+  </definition>
+  <benefits>
+    Online shopping service remembering your card information, or a
+    subscription service that is billed every month. When a company is
+    collecting credit information, they can use this to help track your
+    credit score and give you recommendations based on that.
+  </benefits>
+  <consequences>
+    Stolen credit card information, phishing attacks, or identity theft.
+    This is one of the most sought-after types of data in a data breach, and
+    is certainly the most lucrative when it is stolen. This type of data
+    collection can lead to a lot of stress that is out of your control once
+    it is breached.
+  </consequences>
+  <searchTerms>
+    <term>assets</term>
+    <term>bank account</term>
+    <term>card number</term>
+    <term>credit score</term>
+    <term>debts</term>
+    <term>income</term>
+    <term>payment</term>
+    <term>payment service</term>
+    <term>salary</term>
+  </searchTerms>
+</category>

@@ -1,0 +1,19 @@
+<category>
+  <name>Search</name>
+  <definition>
+    Information about searches performed in the app or website.
+  </definition>
+  <benefits>
+    Remembering what you searched for previously, updating a social feed
+    based on search history. A shopping app using this data alongside
+    purchase data to show you things that you’re more likely to buy based on
+    your searches.
+  </benefits>
+  <consequences>
+    Advertising accuracy is both a pro and con to search data.
+  </consequences>
+  <searchTerms>
+    <term>search</term>
+    <term>history</term>
+  </searchTerms>
+</category>

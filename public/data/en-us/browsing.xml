@@ -1,0 +1,22 @@
+<category>
+  <name>Browsing</name>
+  <definition>
+    Information about content the user has viewed that is not part of the
+    app, such as websites. This is mostly attributed to cookies, and other
+    similar third-party tracking tools.
+  </definition>
+  <benefits>
+    Remembering who you are based on the third-party tracking tools.
+  </benefits>
+  <consequences>
+    Access to track the sites and apps you use outside of the app or website
+    you are on, which has been a notable privacy concern since 1996 since
+    the cookie tool was more publicly known.
+  </consequences>
+  <searchTerms>
+    <term>cookies</term>
+    <term>browsing history</term>
+    <term>third party tracking</term>
+    <term>trackers</term>
+  </searchTerms>
+</category>

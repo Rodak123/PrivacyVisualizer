@@ -1,0 +1,34 @@
+<category>
+  <name>Sensitive Info</name>
+  <definition>
+    Racial or ethnic data, sexual orientation, pregnancy or childbirth
+    information, disability, religious or philosophical beliefs, trade union
+    membership, political opinion, genetic information, or biometric data.
+  </definition>
+  <benefits>
+    An online insurance service having access to your medical records, a
+    telemed doctor's office.
+  </benefits>
+  <consequences>
+    We have seen many data breaches after this kind of data, including the
+    23&amp;Me data breach in 2023, which contained genetic information, among
+    others.
+  </consequences>
+  <searchTerms>
+    <term>belief</term>
+    <term>biometric</term>
+    <term>childbirth</term>
+    <term>disability</term>
+    <term>ethnic</term>
+    <term>genetic</term>
+    <term>philosophical</term>
+    <term>political</term>
+    <term>pregnancy</term>
+    <term>racial</term>
+    <term>religious</term>
+    <term>sensitive</term>
+    <term>information</term>
+    <term>sexual orientation</term>
+    <term>union</term>
+  </searchTerms>
+</category>

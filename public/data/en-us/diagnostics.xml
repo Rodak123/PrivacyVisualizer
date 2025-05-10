@@ -1,0 +1,21 @@
+<category>
+  <name>Diagnostics</name>
+  <definition>
+    Data collected for the purposes of measuring technical diagnostics
+    related to the app. Often used to track crash logs, launch time, hang
+    rate, or energy use.
+  </definition>
+  <benefits>
+    If an app is acting up, this data is used by the developers to resolve
+    those issues.
+  </benefits>
+  <consequences>
+    This can contain a lot of detailed usage data, but is not commonly stored.
+  </consequences>
+  <searchTerms>
+    <term>crash logs</term>
+    <term>diagnostics</term>
+    <term>energy use</term>
+    <term>launch time</term>
+  </searchTerms>
+</category>

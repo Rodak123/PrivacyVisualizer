@@ -1,0 +1,19 @@
+$themes: (
+ light: (
+   text: #190c0b,
+   background: #faf5f5,
+   primary: #b65554,
+   secondary: #c4d8a2,
+   accent: #88c97e,
+ ),
+ dark: (
+   text: #f4e7e6,
+   background: #0a0505,
+   primary: #ab4b49,
+   secondary: #4a5d27,
+   accent: #408136,
+ ),
+);
+
+$dark-theme: map-get($themes, dark);
+$light-theme: map-get($themes, light);
