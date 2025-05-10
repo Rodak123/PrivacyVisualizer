@@ -1,0 +1,37 @@
+<category>
+  <name>User Content</name>
+  <definition>
+    This data contains anything created by you. This includes emails or text
+    messages, including subject line, sender, recipients, and contents of
+    the email or message; Photos or videos, audio data, such as your voice
+    or sound recordings, gameplay content, or any content created during a
+    customer support request. If an app or website offers private messaging
+    between users, they have to discourse on the app store that it’s emails
+    or text messages.
+  </definition>
+  <benefits>
+    Direct messages with people in a chat app, photos being uploaded to a
+    photo sharing platform, audio recordings being used for making music,
+    working with customer support to resolve an issue.
+  </benefits>
+  <consequences>
+    User content can be used to train AI, which in turn can be used in scams
+    that use AI to mimic your likeness to trick families into sending a
+    scammer money.
+  </consequences>
+  <searchTerms>
+    <term>audio</term>
+    <term>capture</term>
+    <term>chat</term>
+    <term>customer support</term>
+    <term>direct message</term>
+    <term>email</term>
+    <term>gameplay</term>
+    <term>photos</term>
+    <term>recordings</term>
+    <term>text</term>
+    <term>user content</term>
+    <term>videos</term>
+    <term>voice</term>
+  </searchTerms>
+</category>

@@ -52,28 +52,28 @@ export const Category = ({ category, textsData }) => {
     searchTerms.term = [searchTerms.term];
 
   return (
-    <>
-      <div className={"category m-1 m-md-3 card " + STATUSES[status]}>
+    <div className="col-4 col-md-3 col-lg-3 mb-4 d-flex justify-content-center">
+      <div className={"category card " + STATUSES[status]}>
         <div
           id={category}
           type="button"
           title={textsData.changeImportance}
-          className="card-img-top d-flex justify-content-center"
+          className="card-img-top d-flex justify-content-center w-100"
           onClick={changeStatus}
         >
           <img draggable={false} className="w-100" src={`images/${category}.png`} alt={category} />
         </div>
-        <div className="card-body" >
+        <div className="card-body">
           <p
-            title={textsData.learnMore}
             type="button"
-            className="card-title m-0 justify-content-center"
+            className="card-title m-0 text-center w-100"
+            title={textsData.learnMore}
             data-bs-toggle="modal"
             data-bs-target={`#${modalId}`}
           >
             {name}
           </p>
-          <i className="bi bi-info-square-fill ms-1"></i>
+          <i className="bi bi-info-square-fill ms-1" />
         </div>
       </div>
       <div
@@ -86,7 +86,7 @@ export const Category = ({ category, textsData }) => {
         <div className="modal-dialog modal-fullscreen-sm-down modal-lg">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id={modalLabelId}>{name}</h1>
+              <h1 className="modal-title fs-5 text-truncate" id={modalLabelId}>{name}</h1>
               <button
                 type="button"
                 className="btn-close"
@@ -95,14 +95,14 @@ export const Category = ({ category, textsData }) => {
               ></button>
             </div>
             <div className="modal-body">
-              <p className="h5">{textsData.definition}:</p>
+              <p className="h5 text-truncate">{textsData.definition}:</p>
               <p>{extractElem(definition)}</p>
               {location !== null && (<LocationDisplay location={location} />)}
-              <p className="h5 benefits">{textsData.benefits}:</p>
+              <p className="h5 benefits text-truncate">{textsData.benefits}:</p>
               <p>{extractElem(benefits)}</p>
-              <p className="h5 consequences">{textsData.consequences}:</p>
+              <p className="h5 consequences text-truncate">{textsData.consequences}:</p>
               <p>{extractElem(consequences)}</p>
-              <p className="h5">{textsData.searchTerms}:</p>
+              <p className="h5 text-truncate">{textsData.searchTerms}:</p>
               <p>{searchTerms.term.join(", ")}</p>
             </div>
             <div className="modal-footer">
@@ -113,6 +113,6 @@ export const Category = ({ category, textsData }) => {
           </div>
         </div>
       </div>
-    </>
+    </div >
   );
 };

@@ -1,0 +1,16 @@
+<category>
+  <name>Other Data</name>
+  <definition>
+    Any other data types not mentioned, such as data captured from the LiDAR
+    sensor on your phone.
+  </definition>
+  <benefits>
+    Use your best judgment!
+  </benefits>
+  <consequences>
+    Use your best judgment!
+  </consequences>
+  <searchTerms>
+    <term>other data</term>
+  </searchTerms>
+</category>

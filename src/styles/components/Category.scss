@@ -15,13 +15,7 @@
 
 // Category
 .category {
-  min-width: 130px;
-
-  .card-title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
+  // min-width: 130px;
 
   .card-body {
     padding: 0.3rem;
@@ -80,10 +74,6 @@
 
     i {
       display: block;
-    }
-
-    .card-title {
-      justify-content: space-between;
     }
   }
 }

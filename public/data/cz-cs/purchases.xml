@@ -1,0 +1,25 @@
+<category>
+  <name>Purchases</name>
+  <definition>
+    An account’s or individual’s purchases or purchase tendencies. This data
+    is commonly used to identify patterns and trends in your spending
+    behavior, which is normally used for advertising purposes, whether from
+    the service you are shopping with, or with third parties.
+  </definition>
+  <benefits>
+    Buying an item or series of items consistently can lead to you getting
+    coupons for similar items. Another way of putting it is advertising
+    accuracy.
+  </benefits>
+  <consequences>
+    You may get hyper-specific ads that seem to “read your mind,” but are
+    ultimately based on complex algorithms that track patterns in your
+    spending behavior. The consequence is also its benefit, advertising
+    accuracy.
+  </consequences>
+  <searchTerms>
+    <term>purchases</term>
+    <term>shopping</term>
+    <term>spending</term>
+  </searchTerms>
+</category>

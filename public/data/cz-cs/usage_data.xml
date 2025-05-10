@@ -1,0 +1,35 @@
+<category>
+  <name>Usage Data</name>
+  <definition>
+    Ways you interact with the app or website, like app launches, taps,
+    clicks, scrolling information, music listening data, video views, saved
+    place in a game, video, or song, or other information about how you
+    interact with the app or website. This also contains advertising data,
+    such as information about the advertisements you have seen or clicked.
+    This data can be used to make suggestions based on your behaviors within
+    the app.
+  </definition>
+  <benefits>
+    A video platform that uses an algorithm to make your feed feel more
+    personalized based on how you use the platform.
+  </benefits>
+  <consequences>
+    Making the app very addictive, since they understand how and when you
+    interact with content within that app. This is what we’ve seen with
+    Facebook and “ragebait” content for years now. Additionally, advertising
+    accuracy is both a pro and con.
+  </consequences>
+  <searchTerms>
+    <term>advertising</term>
+    <term>analytics</term>
+    <term>clicked</term>
+    <term>engagement</term>
+    <term>interact</term>
+    <term>likes</term>
+    <term>usage</term>
+    <term>data</term>
+    <term>user interaction</term>
+    <term>viewed</term>
+    <term>views</term>
+  </searchTerms>
+</category>

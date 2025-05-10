@@ -1,0 +1,60 @@
+<category>
+  <name>Location</name>
+  <location>
+    <coarseLocation>Coarse Location</coarseLocation>
+    <preciseLocation>Precise Location</preciseLocation>
+    <decimals>
+      <decimal>
+        1st decimal: ~ 6.9 mi (11.1km); A city
+      </decimal>
+      <decimal>
+        2nd decimal: ~ 0.5 mi (1.1km); A neighborhood
+      </decimal>
+      <decimal>
+        3rd decimal: ~ 360 ft (110m); A building
+      </decimal>
+      <decimal>
+        4th decimal: ~ 36 ft (11m): A tennis court
+      </decimal>
+      <decimal>
+        5th decimal: ~ 3 ft (1.1m); A guitar
+      </decimal>
+      <decimal>
+        6th decimal: ~ 4 in (11cm): A deck of cards
+      </decimal>
+      <decimal>
+        7th decimal: ~ 0.5 in (1.1cm): The thickness of one AAA battery. This is
+        how accurate iPhones are when tracking devices like AirTags.
+      </decimal>
+    </decimals>
+  </location>
+  <definition>
+    This can be precise location, which is information that describes the
+    location of you or your device with the same or greater resolution as
+    latitude and longitude with three or more decimal places. Coarse
+    location is the location of you or your device with lower resolution
+    than a latitude and longitude with three or more decimal places, such as
+    Approximate Location Services. For additional context, here is the scale
+    of these decimal places:
+  </definition>
+  <benefits>
+    Finding your lost AirPods, using GPS while traveling, playing
+    location-based games like Pokemon Go.
+  </benefits>
+  <consequences>
+    You can be tracked down to the inch due to the volume of Apple devices
+    in most populated areas of the USA. While precise data isn't commonly
+    stored for long periods of time, it can be, and can be shared with data
+    brokers, law enforcement, and potential bad actors.
+  </consequences>
+  <searchTerms>
+    <term>approximate</term>
+    <term>bluetooth</term>
+    <term>coarse</term>
+    <term>GPS</term>
+    <term>IP address</term>
+    <term>location</term>
+    <term>precise</term>
+    <term>ultra wideband</term>
+  </searchTerms>
+</category>

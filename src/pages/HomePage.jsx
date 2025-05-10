@@ -39,14 +39,14 @@ export const HomePage = () => {
   return (
     <>
       <header id="header" className="d-flex px-2 mt-1 align-items-center justify-content-between">
-        <h1 className="fs-3 mb-0">{textsData.title}</h1>
+        <h1 className="title fs-3 mb-0 flex-grow-1 text-truncate">{textsData.title}</h1>
         <div className="d-flex">
           <ThemeToggle />
           <LanguageSelect />
         </div>
       </header>
-      <main className="container-fluid flex-grow-1 d-flex flex-column pt-2">
-        <div className="w-100">
+      <main className="flex-grow-1 align-items-center d-flex flex-column pt-2">
+        <div className="px-2">
           <p className="mb-0">
             {textsData.about}
           </p>
@@ -54,21 +54,23 @@ export const HomePage = () => {
             {textsData.referenceLink}
           </Link>
         </div>
-        <div className="d-flex flex-wrap justify-content-center container-md">
-          <Category category="health" textsData={textsData} />
-          <Category category="purchases" textsData={textsData} />
-          <Category category="financial" textsData={textsData} />
-          <Category category="location" textsData={textsData} />
-          <Category category="contact_info" textsData={textsData} />
-          <Category category="contacts" textsData={textsData} />
-          <Category category="user_content" textsData={textsData} />
-          <Category category="search" textsData={textsData} />
-          <Category category="browsing" textsData={textsData} />
-          <Category category="identifiers" textsData={textsData} />
-          <Category category="usage_data" textsData={textsData} />
-          <Category category="sensitive_info" textsData={textsData} />
-          <Category category="diagnostics" textsData={textsData} />
-          <Category category="other_data" textsData={textsData} />
+        <div className="d-flex flex-column pt-2" style={{ maxWidth: '600px' }}>
+          <div className="w-100 row justify-content-center">
+            <Category category="health" textsData={textsData} />
+            <Category category="purchases" textsData={textsData} />
+            <Category category="financial" textsData={textsData} />
+            <Category category="location" textsData={textsData} />
+            <Category category="contact_info" textsData={textsData} />
+            <Category category="contacts" textsData={textsData} />
+            <Category category="user_content" textsData={textsData} />
+            <Category category="search" textsData={textsData} />
+            <Category category="browsing" textsData={textsData} />
+            <Category category="identifiers" textsData={textsData} />
+            <Category category="usage_data" textsData={textsData} />
+            <Category category="sensitive_info" textsData={textsData} />
+            <Category category="diagnostics" textsData={textsData} />
+            <Category category="other_data" textsData={textsData} />
+          </div>
         </div>
       </main>
       <footer id="footer" className="d-flex px-2 gap-2 justify-content-end align-items-center">
