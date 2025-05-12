@@ -10,4 +10,6 @@
   <sourceCode>source code</sourceCode>
   <learnMore>Learn More</learnMore>
   <changeImportance>Change Importance</changeImportance>
+  <savePrompt>Pick a name</savePrompt>
+  <savePromptDefault>Privacy Policy</savePromptDefault>
 </texts>

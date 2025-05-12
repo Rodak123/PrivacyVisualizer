@@ -29,10 +29,27 @@ export const validateTextsXML = (xmlJson) => {
     searchTerms = undefined,
     sourceCode = undefined,
     learnMore = undefined,
-    changeImportance = undefined
+    changeImportance = undefined,
+    savePrompt = undefined,
+    savePromptDefault = undefined,
   } = texts;
 
-  const strings = [title, about, referenceLink, close, definition, benefits, consequences, searchTerms, sourceCode, learnMore, changeImportance];
+  const strings = [
+    title,
+    about,
+    referenceLink,
+    close,
+    definition,
+    benefits,
+    consequences,
+    searchTerms,
+    sourceCode,
+    learnMore,
+    changeImportance,
+    savePrompt,
+    savePromptDefault
+  ];
+
   if (!areStrings(strings))
     return false;
 

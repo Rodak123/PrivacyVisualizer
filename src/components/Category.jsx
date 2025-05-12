@@ -1,52 +1,38 @@
-import { LocaleContext } from "../context/LocaleContext";
 import React from "react";
 import { LocationDisplay } from "./LocationDisplay";
-import { validateCategoryXML } from "../utils/validateXML";
+import { validateCategoryXML, validateTextsXML } from "../utils/validateXML";
+import { useLocalizedTexts } from "../hooks/useLocalizedTexts";
+import { Loading } from "./Loading";
 
-const extractElem = (xml) => {
+const parse = (xml) => {
   return xml.trim().replace('\n', '');
 };
 
 const STATUSES = ['none', 'not-linked', 'linked', 'tracking'];
 
-export const Category = ({ category, textsData }) => {
-  const { fetchLocaleXML, locale } = React.useContext(LocaleContext);
-  const [categoryData, setCategoryData] = React.useState(null);
-  const [lastLocale, setLastLocale] = React.useState(null);
+export const Category = ({ category }) => {
+  const textsData = useLocalizedTexts({
+    file: 'texts.xml',
+    validator: validateTextsXML,
+    parser: (xmlJson) => xmlJson.texts
+  });
+
+  const categoryData = useLocalizedTexts({
+    file: `${category}.xml`,
+    validator: validateCategoryXML,
+    parser: (xmlJson) => xmlJson.category
+  });
+
   const [status, setStatus] = React.useState(0);
 
   const changeStatus = () => {
     setStatus((status + 1) % STATUSES.length);
   }
 
-  React.useEffect(() => {
-    const loadCategoryData = async () => {
-      const json = await fetchLocaleXML(`${category}.xml`);
-      if (json === null) {
-        console.error(`Error fetching or parsing XML of category: ${category}, retrying`);
-        setTimeout(loadCategoryData, 200);
-        return;
-      }
-
-      if (!validateCategoryXML(json)) {
-        console.error(`Wrong XML format of category: ${category}`);
-        return;
-      }
-
-      setCategoryData(json.category);
-      setLastLocale(locale);
-    };
-
-    if (categoryData === null || locale !== lastLocale) loadCategoryData();
-  }, [locale, fetchLocaleXML, category, categoryData, lastLocale]);
-
-  if (categoryData == null)
-    return null;
-
   const modalId = `${category}Modal`;
   const modalLabelId = `${category}ModalLabel`;
 
-  let { name, definition, benefits, consequences, searchTerms, location = null } = categoryData;
+  let { name = '', definition = '', benefits = '', consequences = '', searchTerms = { term: [] }, location = null } = categoryData ?? {};
 
   if (typeof searchTerms.term === 'string')
     searchTerms.term = [searchTerms.term];
@@ -57,23 +43,30 @@ export const Category = ({ category, textsData }) => {
         <div
           id={category}
           type="button"
-          title={textsData.changeImportance}
+          title={textsData?.changeImportance}
           className="card-img-top d-flex justify-content-center w-100"
           onClick={changeStatus}
         >
-          <img draggable={false} className="w-100" src={`images/${category}.png`} alt={category} />
+          {(categoryData === null || textsData === null)
+            ? (
+              <div className="w-100 d-flex justify-content-center align-items-center" style={{ height: 'auto', aspectRatio: '1' }}>
+                <Loading className="text-light" />
+              </div>
+            )
+            : (<img draggable={false} className="w-100" src={`images/${category}.png`} alt={category} />)
+          }
         </div>
         <div className="card-body">
           <p
             type="button"
             className="card-title m-0 text-center w-100"
-            title={textsData.learnMore}
+            title={textsData?.learnMore}
             data-bs-toggle="modal"
             data-bs-target={`#${modalId}`}
           >
             {name}
           </p>
-          <i className="bi bi-info-square-fill ms-1" />
+          {/* <i className="bi bi-info-square-fill ms-1" /> */}
         </div>
       </div>
       <div
@@ -95,19 +88,19 @@ export const Category = ({ category, textsData }) => {
               ></button>
             </div>
             <div className="modal-body">
-              <p className="h5 text-truncate">{textsData.definition}:</p>
-              <p>{extractElem(definition)}</p>
+              <p className="h5 text-truncate">{textsData?.definition}:</p>
+              <p>{parse(definition)}</p>
               {location !== null && (<LocationDisplay location={location} />)}
-              <p className="h5 benefits text-truncate">{textsData.benefits}:</p>
-              <p>{extractElem(benefits)}</p>
-              <p className="h5 consequences text-truncate">{textsData.consequences}:</p>
-              <p>{extractElem(consequences)}</p>
-              <p className="h5 text-truncate">{textsData.searchTerms}:</p>
+              <p className="h5 benefits text-truncate">{textsData?.benefits}:</p>
+              <p>{parse(benefits)}</p>
+              <p className="h5 consequences text-truncate">{textsData?.consequences}:</p>
+              <p>{parse(consequences)}</p>
+              <p className="h5 text-truncate">{textsData?.searchTerms}:</p>
               <p>{searchTerms.term.join(", ")}</p>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
-                {textsData.close}
+                {textsData?.close}
               </button>
             </div>
           </div>

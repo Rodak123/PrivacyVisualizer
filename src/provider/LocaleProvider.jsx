@@ -44,7 +44,7 @@ export const LocaleProvider = ({ children }) => {
   const fetchLocaleXML = async (file) => {
     let xml = await fetchXML(file, locale);
     if (xml === null && languages.length > 0 && locale !== languages[0]) {
-      xml = await fetchXML(file, languages[0]);
+      xml = await fetchXML(file, languages[0]); // use fallback
     }
     return xml;
   };

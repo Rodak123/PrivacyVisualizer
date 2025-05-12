@@ -1,17 +1,16 @@
 <category>
-  <name>Browsing</name>
+  <name>Prohlížení</name>
   <definition>
-    Information about content the user has viewed that is not part of the
-    app, such as websites. This is mostly attributed to cookies, and other
-    similar third-party tracking tools.
+    Informace o obsahu, který uživatel zobrazil a který není součástí aplikace, například webové stránky.
+    Většinou se to připisuje souborům cookie a dalším nástrojům pro sledování třetích stran.
   </definition>
   <benefits>
-    Remembering who you are based on the third-party tracking tools.
+    Ověření totožnosti, na základě nástrojů pro sledování třetích stran.
   </benefits>
   <consequences>
-    Access to track the sites and apps you use outside of the app or website
-    you are on, which has been a notable privacy concern since 1996 since
-    the cookie tool was more publicly known.
+    Přístup ke sledování webů a aplikací, které používáte mimo aplikaci nebo webovou stránku.
+    Což je od roku 1996 významným problémem v oblasti ochrany soukromí,
+    protože se to stalo veřejně známějším.
   </consequences>
   <searchTerms>
     <term>cookies</term>
