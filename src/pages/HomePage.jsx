@@ -5,12 +5,30 @@ import { Category } from "../components/Category";
 import { LanguageSelect } from "../components/LanguageSelect";
 import { LocaleContext } from "../context/LocaleContext";
 import { Loading } from "../components/Loading";
-import { validateTextsXML } from '../utils/validateXML.js'
+import { validateTextsXML } from "../utils/validateXML.js";
+import { createFileName, useScreenshot } from "use-react-screenshot";
 
 export const HomePage = () => {
   const { fetchLocaleXML, locale } = React.useContext(LocaleContext);
   const [textsData, setTextsData] = React.useState(null);
   const [lastLocale, setLastLocale] = React.useState(null);
+
+  const categoriesRef = React.useRef(null);
+  const [_, takeScreenshot] = useScreenshot({
+    type: "image/jpeg",
+    quality: 1.0
+  });
+
+  const downloadImage = (image, { extension = 'jpg' } = {}) => {
+    const name = prompt('Pick a name:', 'privacy policy');
+
+    const a = document.createElement("a");
+    a.href = image;
+    a.download = createFileName(extension, name);
+    a.click();
+  };
+
+  const getImage = () => takeScreenshot(categoriesRef.current).then(downloadImage);
 
   React.useEffect(() => {
     const loadTextsData = async () => {
@@ -41,8 +59,9 @@ export const HomePage = () => {
       <header id="header" className="d-flex px-2 mt-1 align-items-center justify-content-between">
         <h1 className="title fs-3 mb-0 flex-grow-1 text-truncate">{textsData.title}</h1>
         <div className="d-flex">
-          <ThemeToggle />
+          <button type="button" className="btn" onClick={getImage}>Save</button>
           <LanguageSelect />
+          <ThemeToggle />
         </div>
       </header>
       <main className="flex-grow-1 align-items-center d-flex flex-column pt-2">
@@ -55,7 +74,7 @@ export const HomePage = () => {
           </Link>
         </div>
         <div className="d-flex flex-column pt-2" style={{ maxWidth: '600px' }}>
-          <div className="w-100 row justify-content-center">
+          <div className="w-100 row justify-content-center" ref={categoriesRef}>
             <Category category="health" textsData={textsData} />
             <Category category="purchases" textsData={textsData} />
             <Category category="financial" textsData={textsData} />

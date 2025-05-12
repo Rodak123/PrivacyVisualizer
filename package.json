@@ -15,9 +15,11 @@
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",
     "fast-xml-parser": "^5.2.2",
+    "html2canvas": "^1.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.0"
+    "react-router-dom": "^7.6.0",
+    "use-react-screenshot": "^4.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
