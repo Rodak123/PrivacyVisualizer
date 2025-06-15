@@ -2,7 +2,7 @@
   "name": "privacy-visualizer",
   "author": "Radek Titěra",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.2.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
