@@ -2,12 +2,14 @@
   <title>Privacy Visualizer</title>
   <about>A tool to help you visualize privacy policies. Learn more about each category by clicking its name.</about>
   <referenceLink>Click here to learn why Reject Convenience made this visualizer.</referenceLink>
+  <sourceCode>source code</sourceCode>
   <close>Close</close>
+  <save>Save</save>
+  <changeTheme>Change Theme</changeTheme>
   <definition>Definition</definition>
   <benefits>Potential benefits</benefits>
   <consequences>Potential consequences</consequences>
   <searchTerms>Search Terms</searchTerms>
-  <sourceCode>source code</sourceCode>
   <learnMore>Learn More</learnMore>
   <changeImportance>Change Importance</changeImportance>
   <savePrompt>Pick a name</savePrompt>

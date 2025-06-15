@@ -38,7 +38,7 @@ export const HomePage = () => {
       <header id="header" className="d-flex px-2 mt-1 align-items-center justify-content-between">
         <h1 className="title fs-3 mb-0 flex-grow-1 text-truncate">{textsData?.title}</h1>
         <div className="d-flex">
-          <button type="button" className="btn" onClick={getImage}>Save</button>
+          <button type="button" className="btn" onClick={getImage}>{textsData?.save}</button>
           <LanguageSelect />
           <ThemeToggle />
         </div>
