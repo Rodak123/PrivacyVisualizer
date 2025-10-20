@@ -1,6 +1,6 @@
 # Privacy Visualizer Redesign
 
-Demo: [here](https://test.racode.cz/)
+Demo: [here](https://test.titera.dev/)
 
 Made with: React + Vite
 
